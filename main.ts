@@ -12,7 +12,7 @@ namespace StatusBarKind {
     export const Ammo = StatusBarKind.create()
 }
 scene.onHitWall(SpriteKind.Player, function (sprite, location) {
-    if (tiles.tileAtLocationEquals(location, assets.tile`myTile1`)) {
+    if (tiles.tileAtLocationEquals(location, assets.tile`transparency16`)) {
         if (controller.B.isPressed()) {
             if (ToggleCrouch == false) {
                 animation.runImageAnimation(
@@ -1230,7 +1230,7 @@ scene.setBackgroundImage(img`
     eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     `)
-tiles.setCurrentTilemap(tilemap`level2`)
+tiles.setCurrentTilemap(tilemap`level1`)
 mySprite = Render.getRenderSpriteVariable()
 tiles.placeOnTile(mySprite, tiles.getTileLocation(13, 13))
 Render.moveWithController(2, 3, 1)
@@ -1305,7 +1305,7 @@ animation.animationPresets(animation.bobbing),
 2000,
 true
 )
-for (let value of tiles.getTilesByType(assets.tile`myTile0`)) {
+for (let value of tiles.getTilesByType(assets.tile`transparency16`)) {
     mySprite6 = sprites.create(img`
         b b b b b b b b b b b b b b b b 
         b . . . . . . . . . . . . . . b 
